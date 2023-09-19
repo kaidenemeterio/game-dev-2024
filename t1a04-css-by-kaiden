@@ -18,3 +18,29 @@ document.getElementById('myB1').style.backgroundColor = 'yellow'
 }"><br>
 <textarea style="position:relative; left: 0; top:0; width: 200; height:50; "> Advanced see if you move this textarea
 </textarea><br>
+<html>
+<head>
+<style>
+body {
+  color: purple;
+}
+
+h1 {
+  color: #cc6699;
+}
+
+p.ex {
+  color: rgb(204, 102, 153);
+}
+</style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+
+<p>This is an ordinary paragraph. Notice that this text is red. The default text-color for a page is defined in the body selector.</p>
+
+<p class="ex">This is a paragraph with class="ex". This text is blue.</p>
+
+</body>
+</html>
