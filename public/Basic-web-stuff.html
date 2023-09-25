@@ -1,57 +1,94 @@
-<h1 align=center> <html>
+<!DOCTYPE html>
+<html>
+
 <head>
-<title> Basic web stuff </title>
-<body>  
-<h5>Version 0.0.3</h5>
+    <title>Basic Web Stuff</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%; /* Centering the content */
+        }
 
-  <h1 align=center> T3A01-Web-Basc-by-kaiden.html </h1>
-<li></li><a href="https://www.google.ca">Link to Google</a>
-  This is an image <br>
-  <hr>
-  <img width=600
-    src="https://i.imgur.com/iZiuOdd.jpg"><br><br>
+        h1, h5, ul, p, img, iframe, hr, .button-container {
+            margin: 20px auto;
+            text-align: center;
+            width: 100%; /* Centering the content */
+        }
 
-  Youtube Embedded video <br>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/XyyeLpmPPPY?si=9ZZVGVD-k-RlJCMv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  <hr>
-  <input type=button value="0. Pseudo Code" onclick="{
-    document.getElementById('myDiv01').innerHTML= 'Hello World'
-  }">
-  <input type=button value="1. Input/Output" onclick="{
-    document.getElementById('myDiv01').innerHTML= 'information into and out of your program'
-  }">
-  <input type=button value="2. variables" onclick="{
-     document.getElementById('myDiv01').innerHTML= 'store stuff'
-  }">
-  <input type=button value="3. loops" onclick="{
-     document.getElementById('myDiv01').innerHTML= 'repeat stuff'
-   }">
-       <input type=button value="4. decisions" onclick="{
-    document.getElementById('myDiv01').innerHTML= 'decide stuff based on stored stuff'
-    }">
-  <input type=button value="5. functions" onclick="{
-  document.getElementById('myDiv01').innerHTML= 'named group of code that can be called multiple times fuction'
-  }">
-   <input type=button value="6. events" onclick="{
-       document.getElementById('myDiv01').innerHTML= 'trigger computer code'
-  }">
-   <input type=button value="7. arrays" onclick="{
-     document.getElementById('myDiv01').innerHTML= 'a numbered list of variables'
-  }">
-  <input type=button value="8. objects" onclick="{
-    document.getElementById('myDiv01').innerHTML= 'a named list of variables'
-  }">
-  Decisions use the if statement to make true
-  false variable decisions<br>
-  <pre>
-   
- 
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* Adjusted image width for responsiveness */
+            border: 2px solid #ccc;
+        }
 
-  <div id="myDiv01">...</div>
-  <body>
- <html>
-  <body style="background-color:powderblue;">
-  </body>
-<head>
-   
-</h1>
+        .button-container {
+            margin-top: 20px;
+            display: inline-block; /* Display buttons inline */
+        }
+
+        .button-container input[type=button] {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button-container input[type=button]:hover {
+            background-color: #2980b9;
+        }
+
+        #myDiv01 {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            display: inline-block; /* Display the div inline */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Basic Web Stuff</h1>
+    <h5>Version 0.0.3</h5>
+
+    <h1>T3A01-Web-Basc-by-kaiden.html</h1>
+    <ul>
+        <li><a href="https://www.google.ca">Link to Google</a></li>
+    </ul>
+
+    <p>This is an image:</p>
+    <img src="https://i.imgur.com/iZiuOdd.jpg" alt="Image" />
+
+    <p>Youtube Embedded video:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XyyeLpmPPPY?si=9ZZVGVD-k-RlJCMv"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <hr>
+
+    <div class="button-container">
+        <input type="button" value="0. Pseudo Code" onclick="{ document.getElementById('myDiv01').innerHTML= 'Hello World' }">
+        <input type="button" value="1. Input/Output" onclick="{ document.getElementById('myDiv01').innerHTML= 'Information into and out of your program' }">
+        <input type="button" value="2. Variables" onclick="{ document.getElementById('myDiv01').innerHTML= 'Store stuff' }">
+        <input type="button" value="3. Loops" onclick="{ document.getElementById('myDiv01').innerHTML= 'Repeat stuff' }">
+        <input type="button" value="4. Decisions" onclick="{ document.getElementById('myDiv01').innerHTML= 'Decide stuff based on stored stuff' }">
+        <input type="button" value="5. Functions" onclick="{ document.getElementById('myDiv01').innerHTML= 'Named group of code that can be called multiple times' }">
+        <input type="button" value="6. Events" onclick="{ document.getElementById('myDiv01').innerHTML= 'Trigger computer code' }">
+        <input type="button" value="7. Arrays" onclick="{ document.getElementById('myDiv01').innerHTML= 'A numbered list of variables' }">
+        <input type="button" value="8. Objects" onclick="{ document.getElementById('myDiv01').innerHTML= 'A named list of variables' }">
+    </div>
+
+    <p>Decisions use the if statement to make true/false variable decisions</p>
+
+    <div id="myDiv01">...</div>
+</body>
+
+</html>
