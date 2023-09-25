@@ -7,18 +7,34 @@ Click me to display Date and Time.</button>
 <p id="demo"></p>
 
 </body>
-</html> 
-
 <h3 align=center>T1z02-object-zombie-kaiden.html</h3>
+<script>
+  let myZombie = {
+    'zombie' : TRUE,
+    'name' :'danny'
+  }
+  let myHuman = {
+    'zombie' : FALSE,
+    'name' : 'william'
+  }
 
-Is <input id="myText01" type="text" value="Tim"> a Zombie?<br>
-<input type=button value= "Check it" onclick="{
-  alert('maybe')
-}"><br>
+    </script>
+Is <select id"mySelect01" size=1 onChange="{
+  myInput = document.getElementById('mySelect01').vale
+  if (myZombie.name== myInput && myZombie.zombie) {
+     document.getElementById('Mydiv01').innerHTML = myInput + ' is a zombie'
+  } else if (myHuman.name == myInput && myZombie.zombie) {
+        document.getElementById('myDiv01').innerHTML = myInput = ' is NOT a Zombie'
+  }
+  }">
+  <option>
+  <option>danny
+  <option>william
+</select > a Zombie?<br>
+
 <div id="myDiv01">...</div><br>
-
-<html>
-<body>
+  </option>
+    
 <html>
   <body style="background-color:powderblue;">
   </body>
