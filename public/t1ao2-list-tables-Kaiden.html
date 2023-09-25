@@ -1,40 +1,92 @@
- <h1 style="text-align: center;">Lists and Tables</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+
+        td img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        ol, ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ol li::before {
+            content: "🌊 "; /* Water droplet icon */
+        }
+
+        ul li::before {
+            content: "💍 "; /* Ring icon */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lists and Tables</h1>
 
     <h3>Tables</h3>
-    <table border=1
-    <h3>Tables</h3>
-    <table border="1">
+    <table>
         <tr>
-            <!-- First Row: Table Headers -->
             <th>Image</th>
             <th>Description</th>
         </tr>
         <tr>
-            <!-- Second Row: Table Data -->
             <td><a href="YOUR_LINK_HERE"><img src="https://cdn.mos.cms.futurecdn.net/4MLyNZ66GSMUp7z49Q8k3K-970-80.jpg.webp" width="200" height="150"></a></td>
-            <td>space</td>
+            <td>Space</td>
         </tr>
         <tr>
-            <!-- Add more rows as needed -->
             <td><a href="YOUR_LINK_HERE"><img src="https://pm1.aminoapps.com/6148/f299133b0c985fb97b09fcef7571ddcbd249d9de_hq.jpg" width="200" height="150"></a></td>
-            <td>beyond space</td>
+            <td>Beyond Space</td>
         </tr>
-    </table><br>
-<html>
-  <body style="background-color:powderblue;">
-  </body>
-<head>
+    </table>
 
- <h3>Lists</h3>
-<ol>
-    <li>Water</li>
-    <li>Fire</li>
-    <li>Earth</li>
-</ol>
+    <h3>Lists</h3>
+    <ol>
+        <li>Water</li>
+        <li>Fire</li>
+        <li>Earth</li>
+    </ol>
 
- <ul>
-     <li>Rings</li>
-     <li>Chains</li>
-     <li>Earings</li>
- </ul>
- 
+    <ul>
+        <li>Rings</li>
+        <li>Chains</li>
+        <li>Earrings</li>
+    </ul>
+</body>
+</html>
