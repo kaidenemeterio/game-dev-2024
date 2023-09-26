@@ -1,0 +1,26 @@
+<h3 align=center>T1z03-array-Kaiden.html
+
+
+
+  <script>
+    let myThingName = ['Jon''Dan''Fred']
+    let myThingZombie = [true,false,true]
+</script>
+   Is <select id"mySelect01" size=1 onChange="{
+     myInput = document.getElementById('mySelect01').value
+     for (myLoop=0; myLoop < 4; myLoop++){
+       if (myThingName[myLoop] == myInput){
+          document.getElementById('myDiv01').innerHTML = myInput + ' is a zombie '
+       } else {
+             document.getElementById('myDiv01').innerHTML = myInput + ' is NOT a Zombie'
+
+                }
+               }
+              }
+       }">
+         <option>
+         <option>Jon
+         <option>Dan
+         <option>Fred
+   </select> a Zombie? Really!<br>
+   <div id='myDiv01'>...</div><br>
