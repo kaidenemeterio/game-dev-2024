@@ -1,26 +1,33 @@
-<h3 align=center>T1z03-array-Kaiden.html
-
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>T1z03-array-Kaiden.html</title>
+</head>
+<body>
+  <h3 align="center">Is <select id="mySelect01" size="1" onchange="checkZombie()">
+      <option></option>
+      <option>Jon</option>
+      <option>Dan</option>
+      <option>Fred</option>
+    </select> a Zombie? Really!</h3>
+  <div id="myDiv01">...</div><br>
 
   <script>
-    let myThingName = ['Jon''Dan''Fred']
-    let myThingZombie = [true,false,true]
-</script>
-   Is <select id"mySelect01" size=1 onChange="{
-     myInput = document.getElementById('mySelect01').value
-     for (myLoop=0; myLoop < 4; myLoop++){
-       if (myThingName[myLoop] == myInput){
-          document.getElementById('myDiv01').innerHTML = myInput + ' is a zombie '
-       } else {
-             document.getElementById('myDiv01').innerHTML = myInput + ' is NOT a Zombie'
+    let myThingName = ['Jon', 'Dan', 'Fred'];
+    let myThingZombie = [true, false, true];
 
-                }
-               }
-              }
-       }">
-         <option>
-         <option>Jon
-         <option>Dan
-         <option>Fred
-   </select> a Zombie? Really!<br>
-   <div id='myDiv01'>...</div><br>
+    function checkZombie() {
+      let myInput = document.getElementById('mySelect01').value;
+
+      for (let myLoop = 0; myLoop < 3; myLoop++) {
+        if (myThingName[myLoop] === myInput) {
+          document.getElementById('myDiv01').innerHTML = myInput + ' is a zombie.';
+          return; 
+        }
+      }
+
+      document.getElementById('myDiv01').innerHTML = myInput + ' is NOT a Zombie.';
+    }
+  </script>
+</body>
+</html>
