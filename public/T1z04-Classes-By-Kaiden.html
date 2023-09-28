@@ -5,27 +5,31 @@
 </head>
 <body>
 
-<h2 align="center">T1z04-Classes-By-Kaiden.html</h2>
+  <h2 align="center">T1z04-Classes-By-Kaiden.html</h2>
 
 <script>
-class myPerson {
+  class myPerson {
   constructor(passName, passAge) {
     this.myName = passName;
     this.myAge = passAge;
   }
-
-  myShow() {
-    document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old.<br>';
+ myShow() {
+  document.getElementById('myDiv01').innerHTML += 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old.<br>';
   }
 }
 
-function createPerson() {
-  let myCharacter = new myPerson('Tommy', 17);
-  myCharacter.myShow();
+   function createPeople() {
+let tommy = new myPerson('Tommy', 17);
+  tommy.myShow();
+
+  let mohid = new myPerson('Mohid', 17);
+  mohid.myShow();
 }
 </script>
 
-<input type="button" value="Create Person" onClick="createPerson()">
+<input type="button" value="Create People" onClick="createPeople()">
 
 <div id="myDiv01">...</div>
 
+</body>
+</html>
