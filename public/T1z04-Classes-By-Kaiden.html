@@ -1,29 +1,31 @@
-<h2 align=center>T1z04-Classes-By-Kaiden.html</h2>
-<script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Classes Example</title>
+</head>
+<body>
 
+<h2 align="center">T1z04-Classes-By-Kaiden.html</h2>
+
+<script>
 class myPerson {
- constructor(passName, passAge) {
+  constructor(passName, passAge) {
     this.myName = passName;
     this.myAge = passAge;
- }
-
-  myShow(){
-      document.getElementById('myDiv01').innerHTML = 'hello '+
-        '. You are ' + this.myAge + ' years old <br>
   }
 
-} // end class myAnimal
+  myShow() {
+    document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old.<br>';
+  }
+}
 
+function createPerson() {
+  let myCharacter = new myPerson('Tommy', 17);
+  myCharacter.myShow();
+}
 </script>
 
-<input type=button value="class Person" onClick="{
+<input type="button" value="Create Person" onClick="createPerson()">
 
-   myCharacter = new myPerson('tommy', 17)
-   myCharcter.myShow()
+<div id="myDiv01">...</div>
 
-  }">
-
-  <div id+"myDiv01">...</div>
-
-
-  
