@@ -1,4 +1,4 @@
-<html>
+
 <head>
 <style>
 div {
@@ -7,6 +7,7 @@ div {
   border: 15px solid green;
   padding: 50px;
   margin: 20px;
+
 }
 </style>
 </head>
@@ -15,5 +16,5 @@ div {
 <div>Kaidens work not screen time, I will be working on VIDEO FLAC</div>
 
 </body> 
-</html>
+
 
