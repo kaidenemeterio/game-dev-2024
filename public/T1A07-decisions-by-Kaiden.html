@@ -2,6 +2,31 @@
 
 <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to Decision if...else statements Javascript innerHTML value by Kaiden</a><br>
 
+<html>
+<body>
+   <h2> this code will say goodmorning (Before 12) and good afternoon (after 12)</h2>
+    <div id="greeting"></div>
+
+    <script>
+        function updateGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+
+            let greeting = "Good morning";
+            if (hours >= 12) {
+                greeting = "Good afternoon";
+            }
+
+            document.getElementById('greeting').textContent = greeting;
+        }
+
+      
+        updateGreeting();
+    </script>
+</body>
+</html>
+
+
 <h4> Example working code</h4>
 
 <input id="myNum01" type="number" value="4"><br>
