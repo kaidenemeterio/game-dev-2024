@@ -1,30 +1,30 @@
-<h2 align=center>t1a11-arrays-by-kaiden.html</h2>
+<h2 align="center">t1a11-arrays-by-kaiden.html</h2>
 
-<a href="">good reference to javascript Arrays</a><br>
+<a href="#">good reference to JavaScript Arrays</a><br>
 
-Arrays are stored numbered variables 
+<p>Arrays are stored numbered variables</p>
 
-<h4> Example Array code </h4>
+<h4>Example Array code</h4>
 
-Max array Entry: <input type=text id="myText01" value="3"><br>
+Max array Entry: <input type="text" id="myText01" value="3"><br>
 
-<input type=button value="Example onClick" onClick="{
-  let myTemp = document.getElementById('mytext01').value
-  let mySum = ''
-  document.getElementById(mydiv01').innerHTML = ' '
+<input type="button" value="Example onClick" onClick="{
+  let myTemp = document.getElementById('myText01').value;
+  let mySum = '';
+  document.getElementById('myDiv01').innerHTML = ' ';
 
-  myArray = new Array()
-  myArray[0] = 'Fred' 
-  myArray[1] = 'Mary'
-  myArray[2] = 'zizzy'
+  let myArray = [];
+  myArray[0] = 'Fred';
+  myArray[1] = 'Mary';
+  myArray[2] = 'zizzy';
 
-  for (let myLoop=0: myLoop < myTemp; myLoop++){
-      mySum += 'Loop #: ' + myLoop  + ' array entry: ' + myArray[myLoop] + '<br>'
+  for (let myLoop = 0; myLoop < myTemp; myLoop++) {
+    mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>';
   }
-  document.getElementById('Mydiv01').innerHTML = mySum 
-  }">
-  <div id="myDiv01">...</div>
+  document.getElementById('myDiv01').innerHTML = mySum;
+}">
+<div id="myDiv01">...</div>
 
-  <br>
+<br>
 
-  you do at least 7 other arrays:<br>
+<p>You need to do at least 7 other arrays.</p>
