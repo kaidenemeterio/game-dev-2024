@@ -1,0 +1,58 @@
+<script>
+  class myAnimal { 
+    constructor(passname, passAge) {
+      this.myName = passName;
+      this.myAge = passAge
+    }
+    myShow()
+        document.getElementByid('myDiv01').innerHTML = 'Hello '+ this.myname+'<br>'
+     } 
+  } // end class myAnimal
+  
+</script>
+
+version 0.0.1
+<h2 align=center>t1a14-extend-class-by-Kaiden.HTML</h2>
+
+Extending a pre-existing Class<br>
+
+<h4> Example class extend code</h4>
+<pre>
+
+  class myCat extends myAnimal {
+     myShow(){
+         document,getElementByid('myDiv01').innerHTML = this.myname
+    }
+  }
+
+</pre>
+
+<h4> example working Classes code</h4>
+
+<input type=button value="Example Class Set and Show Class Animal" onClick="{
+
+  myDog = new myAnimal('Snickers', 5) 
+  myDog.myShow()
+
+  }">
+
+  <h4> Example extending Clsas code</h4>
+  Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+
+  <input type=button value="Example Extent Class Animal" onClick="{
+
+    class mycat extends myAnimal {
+         myShow(){
+             document.getElementById('mydiv01').innerHTML = this.myName + ' is a great cat<br>'
+      }
+    } // end extended class myCat
+
+
+     myPet = new myCat('Fluffy'< 14)
+    mypet.myShow()
+
+    }">
+   <div id='myDiv01">...</div>
+
+     You can try to extend this class and make other classes or add more protperties to the calss or add more methods to the class.
+     
