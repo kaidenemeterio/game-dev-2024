@@ -1,47 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Class Extension Example</title>
-    <script>
-      class MyAnimal {
-        constructor(passName, passAge) {
-          this.myName = passName;
-          this.myAge = passAge;
-        }
-
-        myShow() {
-          document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '<br>';
-        }
-      }
-
-      class MyCat extends MyAnimal {
-        myShow() {
-          document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>';
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <h2 align="center">t1a14-extend-class-by-Kaiden.HTML</h2>
-    Extending a pre-existing Class<br>
-
-
+<head>
+  <title>Class Extension Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+   }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #myDiv01 {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Class Extension Example</h2>
+    <p>Extending a pre-existing class</p>
 
     <h4>Example working Classes code</h4>
-    <input type="button" value="Example Class Set and Show Class Animal" onClick="{
-      myDog = new MyAnimal('Snickers', 5);
-      myDog.myShow();
-    }">
+    <div class="button-container">
+      <button id="setAnimalButton">Example Class Set and Show Class Animal</button>
+    </div>
 
     <h4>Example extending Class code</h4>
-    Nothing: <input type="text" id="myText01" value="Useless at the moment"><br>
+    <div class="button-container">
+      <input type="text" id="myText01" value="Useless at the moment">
+    </div>
+    <div class="button-container">
+      <button id="extendAnimalButton">Example Extend Class Animal</button>
+    </div>
 
-    <input type="button" value="Example Extend Class Animal" onClick="{
-      myPet = new MyCat('Fluffy', 14);
-      myPet.myShow();
-    }">
     <div id="myDiv01">...</div>
 
     <p>You can try to extend this class and make other classes or add more properties to the class or add more methods to the class.</p>
-  </body>
+  </div>
+
+  <script>
+    class MyAnimal {
+      constructor(passName, passAge) {
+        this.myName = passName;
+        this.myAge = passAge;
+      }
+
+      myShow() {
+        document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '<br>';
+      }
+    }
+
+    class MyCat extends MyAnimal {
+      myShow() {
+        document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>';
+      }
+    }
+
+    document.getElementById('setAnimalButton').addEventListener('click', () => {
+      const myDog = new MyAnimal('Snickers', 5);
+      myDog.myShow();
+    });
+
+    document.getElementById('extendAnimalButton').addEventListener('click', () => {
+      const myPet = new MyCat('Fluffy', 14);
+      myPet.myShow();
+    });
+  </script>
+</body>
 </html>
