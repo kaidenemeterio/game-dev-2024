@@ -1,0 +1,44 @@
+version 0.0.1
+
+<h2 align center>t1a06-variables-by-Kaiden.html</h2>
+
+<a href="hello">You Fix: Good reference to Variables in JavaScript and other languages</a><br>
+
+other languages use: bool, int, float, char, string, int_8, int_16 etc<br>
+
+note: JavaScript does use var and let for local variables.<br>
+for Global variables Mr. Ellis prefers to use document.myVarName
+<h4> Example input output code</h4>
+<pre>
+    let myIn01 = document.getElementById('myText01').value
+    document.getElementById('myDiv01').innerHTML = myIn01
+</pre>
+
+<h4> example working code</h4>
+<input id="myText01" type="text" value="the dog"><br>
+
+<input type="button" value="show variable" onclick="{
+ let myIn01 = document.getElementById('myDiv01').innerHTML =
+       document.getElementById('myText01').value
+      }"><br>
+
+<div id="myDiv01">...</div>
+
+<html>
+<body>
+
+<p>Click to disable the BUTTON element:</p>
+
+<button type="button" id="myBtn" onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myBtn");
+  x.disabled = true;
+}
+</script>
+
+</body>
+</html>
