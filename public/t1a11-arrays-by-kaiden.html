@@ -1,34 +1,72 @@
-<h2 align="center">t1a11-arrays-by-kaiden.html</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays Example</title>
+</head>
+<body>
+  <h2 align="center">t1a11-arrays-by-kaiden.html</h2>
 
-<a href="#">good reference to JavaScript Arrays</a><br>
+  <a href="#">good reference to JavaScript Arrays</a><br>
 
-<p>Arrays are stored numbered variables</p>
+  <p>Arrays are stored numbered variables</p>
 
-<h4>Example Array code</h4>
+  <h4>Example Array code for People</h4>
 
-Max array Entry: <input type="text" id="myText01" value="3"><br>
+  Max array Entry People: <input type="text" id="peopleText" value="3"><br>
 
-<input type="button" value="Example onClick" onClick="{
-  let myTemp = document.getElementById('myText01').value;
-  let mySum = '';
-  document.getElementById('myDiv01').innerHTML = ' ';
+  <input type="button" value="Example onClick" onClick="displayPeopleArray()">
+  <div id="peopleDiv">...</div>
 
-  let myArray = [];
-  myArray[0] = 'Fred';
-  myArray[1] = 'Mary';
-  myArray[2] = 'zizzy';
-  myArray[3] = 'Mohid';
-  myArray[4] = 'Tommy';
-  myArray[5] = 'Kaiden';
-  myArray[6] = 'Danny';
-  myArray[7] = 'Bonnie';
-  for (let myLoop = 0; myLoop < myTemp; myLoop++) {
-    mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>';
-  }
-  document.getElementById('myDiv01').innerHTML = mySum;
-}">
-<div id="myDiv01">...</div>
+  <h4>Example Array code for Cars</h4>
 
-<br>
+  Max array Entry Cars: <input type="text" id="carsText" value="3"><br>
 
-<p>You need to do at least 7 other arrays.</p>
+ <input type="button" value="Example onClick" onClick="displayCarsArray()">
+  <div id="carsDiv">...</div>
+
+  <script>
+    function displayPeopleArray() {
+    let myTemp = document.getElementById('peopleText').value;
+   let mySum = '';
+      document.getElementById('peopleDiv').innerHTML = ' ';
+
+      let myArray = [];
+      myArray[0] = 'Fred';
+      myArray[1] = 'Mary';
+    myArray[2] = 'zizzy';
+     myArray[3] = 'Mohid';
+     myArray[4] = 'Tommy';
+     myArray[5] = 'Kaiden';
+     myArray[6] = 'Danny';
+      myArray[7] = 'Bonnie';
+
+    for (let myLoop = 0; myLoop < myTemp; myLoop++) {
+       mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>';
+      }
+
+     document.getElementById('peopleDiv').innerHTML = mySum;
+    }
+
+    function displayCarsArray() {
+   let myTemp = document.getElementById('carsText').value;
+    let mySum = '';
+     document.getElementById('carsDiv').innerHTML = ' ';
+
+      let myArray = [];
+     myArray[0] = 'Acura';
+    myArray[1] = 'Mazda';
+    myArray[2] = 'Toyota';
+    myArray[3] = 'Chevrolet';
+    myArray[4] = 'Ford';
+    myArray[5] = 'BMW';
+     myArray[6] = 'Volvo';
+      myArray[7] = 'Mercedes';
+
+    for (let myLoop = 0; myLoop < myTemp; myLoop++) {
+      mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>';
+      }
+     document.getElementById('carsDiv').innerHTML = mySum;
+    }
+  </script>
+</body>
+</html>
