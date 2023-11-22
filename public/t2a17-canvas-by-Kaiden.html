@@ -28,8 +28,8 @@ You use loops and variables to make fast fancy drawings<br><br>
     myContext.stroke();
   }">
 
-  <input type=button value=".fillText('Hello World', 400, 100)" onclick='{
-    myContext.font = '20px Arial' ;
+  <input type=button value=".fillText('Hello World', 400, 100)" onclick="{
+    myContext.font = '20px Arial';
     myContext.fillText('Hello World', 400, 100);
     myContext.translate(400, 100);
     myContext.rotate(60 * Math.PI / 180); 
@@ -46,6 +46,35 @@ You use loops and variables to make fast fancy drawings<br><br>
       myContext.stroke();
 
   }">
+
+<input type=button value=".createLineargradient(100, 300, 200, 400)" onclick="{
+  let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
+  myGradient.addColorStop(0, 'red');
+  myGradient.addColorStop(0.5, 'blue');
+  myGradient.addColorStop91, 'yellow');
+
+  myContext.fillStyle = myGradient;
+  myContext.fillRect(100, 300, 200, 400)
+
+  // reset fillstyle
+  myContext.fillStyle = 'black';
+}'><br><br>
+
+  <input type=button value="clearRect(20, 20, 50, 50)" onclick="{
+      myContext.clearRect(20, 20, 50, 50);
+}">
+
+  <input type=button value="Clear all" onclick="{
+    myContext.clearRect(0, 0, mycanvas.width, mycanvas.height);
+  }"><br><br>
+
+<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid#000000;"></canvas>
+
+<script>
+  // set up global variales
+  let myCanvas=document.getElementByid('myCoolTag');
+  let myContext=myCanvas.getContext('2d');
+</script>
 
 
     
