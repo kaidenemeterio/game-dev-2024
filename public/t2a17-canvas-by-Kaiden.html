@@ -1,80 +1,75 @@
-<h2 align=center>t2a17-canvas by fred</h2>
+<h2 align=center>t2a17-canvas by Kaiden</h2>
 You use loops and variables to make fast fancy drawings<br><br>
 
 <input type=button value=" for loop .lineTo(30,200)" onclick="{
   myContext.beginPath();
-  mycontext.linewidth = 1;
+  myContext.lineWidth = 1;
   myContext.moveTo(20,10);
-  for (i=0; i<20; i++)[
-      myConext.moveTo(i*2,10*i);
-      myConext.lineTo(i*2,20);
+  for (let i=0; i<20; i++) {
+    myContext.moveTo(i*2,10*i);
+    myContext.lineTo(i*2,20);
   }
-      myContext.stroke();
+  myContext.stroke();
+}">
 
-  }">
+<input type=button value=".fillRect(30,20, 54, 40)" onclick="{
+  myContext.beginPath();
+  myContext.lineWidth = 1;
+  myContext.fillRect(30,20, 54, 40);
+  myContext.stroke();
+}">
 
-  <input type=button value".fillrect(30,20, 54, 40)" onclick="{
-     myContext.beginPath();
-     myContext.lineWidth = 1;
-     myContext.fillRect(30,20, 54, 40);
-     myContext.stroke();
-  }">
+<input type=button value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
+  myContext.beginPath();
+  myContext.lineWidth = 1;
+  myContext.strokeStyle = 'green';
+  myContext.arc(95, 50, 40, 0, 2 * Math.PI);
+  myContext.stroke();
+}">
 
-  <input type=button value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
-    myContext.beginPath();
-    myContext.LineWidth =1;
-    myContext.strokeStyle = 'green';
-    myContext.arc(95, 50, 40, 0, 2 * Math.PI);
-    myContext.stroke();
-  }">
+<input type=button value=".fillText('Hello World', 400, 100)" onclick="{
+  myContext.font = '20px Arial';
+  myContext.fillText('Hello World', 400, 100);
+  myContext.translate(400, 100);
+  myContext.rotate(60 * Math.PI / 180); 
+  myContext.fillText('Hello World',10, 10);
+  myContext.stroke();
+  myContext.resetTransform();
+  //myContext.rotate(-60 * Math.PI / 180);
+}">
 
-  <input type=button value=".fillText('Hello World', 400, 100)" onclick="{
-    myContext.font = '20px Arial';
-    myContext.fillText('Hello World', 400, 100);
-    myContext.translate(400, 100);
-    myContext.rotate(60 * Math.PI / 180); 
-    myContext.fillText('Hello World',10, 10);
-    myContext.stroke();
-    myContext.resetTransform();
-    //myContet.rotate(-60 * Math.PI / 180);
-  }">
+<input type=button value=".quadraticCurveTo(100,220,240,110)" onclick="{
+  myContext.beginPath();
+  myContext.moveTo(300,100);
+  myContext.quadraticCurveTo(100,220,240,110);
+  myContext.stroke();
+}">
 
-    <input type=button value=".quadraticCurveTo(100,220,240,110)' onclick="{
-      myContext.beginPath();
-      myContext.moveTo(300,100);
-      myContext.quadraticCurveTo(100,220,240,110);
-      myContext.stroke();
-
-  }">
-
-<input type=button value=".createLineargradient(100, 300, 200, 400)" onclick="{
+<input type=button value=".createLinearGradient(100, 300, 200, 400)" onclick="{
   let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
   myGradient.addColorStop(0, 'red');
   myGradient.addColorStop(0.5, 'blue');
-  myGradient.addColorStop91, 'yellow');
+  myGradient.addColorStop(1, 'yellow');
 
   myContext.fillStyle = myGradient;
-  myContext.fillRect(100, 300, 200, 400)
+  myContext.fillRect(100, 300, 200, 400);
 
   // reset fillstyle
   myContext.fillStyle = 'black';
-}'><br><br>
+}"><br><br>
 
-  <input type=button value="clearRect(20, 20, 50, 50)" onclick="{
-      myContext.clearRect(20, 20, 50, 50);
+<input type=button value="clearRect(20, 20, 50, 50)" onclick="{
+  myContext.clearRect(20, 20, 50, 50);
 }">
 
-  <input type=button value="Clear all" onclick="{
-    myContext.clearRect(0, 0, mycanvas.width, mycanvas.height);
-  }"><br><br>
+<input type=button value="Clear all" onclick="{
+  myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
+}"><br><br>
 
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid#000000;"></canvas>
 
 <script>
-  // set up global variales
-  let myCanvas=document.getElementByid('myCoolTag');
-  let myContext=myCanvas.getContext('2d');
+  // set up global variables
+  let myCanvas = document.getElementById('myCoolTag');
+  let myContext = myCanvas.getContext('2d');
 </script>
-
-
-    
