@@ -28,19 +28,21 @@ function myHitOther(my1,my2){
        return true
    }
 }
+
+
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
        alert('you lose')  
        document.getElementById('myImg01').style.left = '20px'
-       location = 't2a13-keydown.html'  // go to your next level
+       location = 't2a13-keydown.html' 
    }
 
 
-   // more if statements here like the above
 
 
 
-}  // end of myCheckHit()
+
+} 
 
 
 </script>
@@ -62,7 +64,7 @@ function myCheckHit(){
 
 <input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
+  myCheckHit()    
 }"><br><br>
 
 
