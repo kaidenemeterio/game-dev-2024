@@ -28,29 +28,37 @@
     }
 
     function myCheckHit() {
-      if (myHitOther('myImg01', 'myImg03') || myHitOther('myImg01', 'myImg04')) {
+      if (myHitOther('myImage01', 'myImage03') || myHitOther('myImage01', 'myImage04')) {
         alert('you lose');
-        document.getElementById('myImg01').style.left = '20px';
+        document.getElementById('myImage01').style.left = '20px';
         location = 'https://www.google.com/search?q=dog+picture&sca_esv=587728493&rlz=1C1GCEA_enCA1075CA1075&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjEiKnUpfaCAxWUFTQIHUIHCDUQ_AUoAXoECAMQAw&biw=1920&bih=923&dpr=1&safe=active&ssui=on#imgrc=V_rIzURDXXmHDM';
       }
-      if (myHitOther('myImg01', 'myImg02')) {
+      if (myHitOther('myImage01', 'myImage02')) {
         alert('congratulations you win!');
       }
-      if (myHitOther('myImg01', 'myImg03') || myHitOther('myImg01', 'myImg04')) {
+      if (myHitOther('myImage01', 'myImage03') || myHitOther('myImg01', 'myImg04')) {
         alert('try again');
       }
     }
-
-    function handleKeyPress(event) {
-      document.all.myText01.value = event.key;
-      if (event.key === 'd') {
-        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px';
-      }
-      if (event.key === 's') {
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px';
-      }
-      myCheckHit();
+function movePlayer() {
+    if (keysPressed['w'] || keysPressed['ArrowUp']) {
+      document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px';
+      console.log('Moving up');
     }
+    if (keysPressed['s'] || keysPressed['ArrowDown']) {
+      document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px';
+      console.log('Moving down');
+    }
+    if (keysPressed['a'] || keysPressed['ArrowLeft']) {
+      document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px';
+      console.log('Moving left');
+    }
+    if (keysPressed['d'] || keysPressed['ArrowRight']) {
+      document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px';
+      console.log('Moving right');
+    }
+   
+       }
   </script>
 
   <img id="myImg01" src="myImage01.jpg" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
