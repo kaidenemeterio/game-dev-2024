@@ -1,98 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t2a20 Game Template by kaiden</title>
+</head>
+<body id="myBody" style="background-repeat: repeat; background-size: 80%" background="myBackground.jpg" onkeydown="handleKeyPress(event)">
 
-<h1 align=center>t2a20 Game Template by kaiden</h1>
-<br><br><br><br>
+  <h1 align=center>t2a20 Game Template by kaiden</h1>
+  <br><br><br><br>
 
-<script>
+  <script>
+    let myGlobalX = 0;
+    let myGlobalY = 0;
+    let myClock;
 
- 
-   let myGlobalX = 0
-   let myClock
+    function myHitOther(my1, my2) {
+      const left1 = parseInt(document.getElementById(my1).style.left);
+      const right1 = left1 + parseInt(document.getElementById(my1).style.width);
+      const top1 = parseInt(document.getElementById(my1).style.top);
+      const bottom1 = top1 + parseInt(document.getElementById(my1).style.height);
+      const left2 = parseInt(document.getElementById(my2).style.left);
+      const right2 = left2 + parseInt(document.getElementById(my2).style.width);
+      const top2 = parseInt(document.getElementById(my2).style.top);
+      const bottom2 = top2 + parseInt(document.getElementById(my2).style.height);
+      return (right1 >= left2) && (bottom1 >= top2) && (left1 <= right2) && (top1 <= bottom2);
+    }
 
+    function myCheckHit() {
+      if (myHitOther('myImg01', 'myImg03') || myHitOther('myImg01', 'myImg04')) {
+        alert('you lose');
+        document.getElementById('myImg01').style.left = '20px';
+        location = 'https://www.google.com/search?q=dog+picture&sca_esv=587728493&rlz=1C1GCEA_enCA1075CA1075&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjEiKnUpfaCAxWUFTQIHUIHCDUQ_AUoAXoECAMQAw&biw=1920&bih=923&dpr=1&safe=active&ssui=on#imgrc=V_rIzURDXXmHDM';
+      }
+      if (myHitOther('myImg01', 'myImg02')) {
+        alert('congratulations you win!');
+      }
+      if (myHitOther('myImg01', 'myImg03') || myHitOther('myImg01', 'myImg04')) {
+        alert('try again');
+      }
+    }
 
-  
-function myHitOther(my1,my2){
-   left1   = parseInt(document.getElementById(my1).style.left)
-   right1  = left1 + parseInt(document.getElementById(my1).style.width)
-   top1    = parseInt(document.getElementById(my1).style.top)   
-   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
-   left2   = parseInt(document.getElementById(my2).style.left)
-   right2  = left2 + parseInt(document.getElementById(my2).style.width)
-   top2    = parseInt(document.getElementById(my2).style.top)   
-   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
-   if ((right1  >=  left2  ) &&      	   
-       (bottom1 >=  top2   ) &&
-       (left1   <=  right2 ) &&
-       (top1    <=  bottom2) ){
-       return true
-   }
-}
+    function handleKeyPress(event) {
+      document.all.myText01.value = event.key;
+      if (event.key === 'd') {
+        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px';
+      }
+      if (event.key === 's') {
+        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px';
+      }
+      myCheckHit();
+    }
+  </script>
 
+  <img id="myImg01" src="myImage01.jpg" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
+  <img id="myImg04" src="myImage04.jpg" style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
+  <img id="myImg03" src="myImage03.jpg" style="position:absolute; width:100px; height:80px; left:350px; top:600px;">
+  <img id="myImg02" src="myImage02.jpg" style="position:absolute; width:100px; height:80px; left:1200px; top:670px;">
+  <img id="myImg05" src="myImage04.jpg" style="position:absolute; width:100px; height:80px; left:600px; top:220px;">
+  <img id="myImg06" src="myImage03.jpg" style="position:absolute; width:100px; height:80px; left:800px; top:350px;">
+  <img id="myImg07" src="myImage03.jpg" style="position:absolute; width:100px; height:80px; left:600px; top:600px;">
+  <img id="myImg08" src="myImage04.jpg" style="position:absolute; width:100px; height:80px; left:860px; top:670px;">
 
-function myCheckHit(){
-   if ( myHitOther('myImg01','myImg03','myImg04') ){
-       alert('you lose')  
-       document.getElementById('myImg01').style.left = '20px'
-       location = 'https://www.google.com/search?q=dog+picture&sca_esv=587728493&rlz=1C1GCEA_enCA1075CA1075&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjEiKnUpfaCAxWUFTQIHUIHCDUQ_AUoAXoECAMQAw&biw=1920&bih=923&dpr=1&safe=active&ssui=on#imgrc=V_rIzURDXXmHDM' 
-   }
-   if ( myHitother('myImg02')
-   alert('congratulations you win!')
-  }
-   if ( myHitother('myImg03')
-   alert('try again')
-  }
-   if ( myHitother('myImg04')
-   alert('try again')
+  <input type=button value="Auto Background Left" onclick="startBackgroundAnimation()">
+  <input type=button value="Image Right Fast Button" onclick="moveRight()">
+  <br><br>
 
-
-
-
-
-
-} 
-
-
-</script>
-
-<img id="myImg01" src="myImage01.jpg" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg04" src="myImage04.jpg"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;"> 
-<img id="myImg03" src="myImage03.jpg"  style="position:absolute; width:100px; height:80px; left:350px; top:600px;">
-<img id="myImg02" src="myImage02.jpg"  style="position:absolute; width:100px; height:80px; left:1200px; top:670px;">
-<img id="myImg04" src="myImage04.jpg"  style="position:absolute; width:100px; height:80px; left:600px; top:220px;">
-   <img id="myImg03" src="myImage03.jpg"  style="position:absolute; width:100px; height:80px; left:800px; top:350px;">
-<img id="myImg03" src="myImage03.jpg"  style="position:absolute; width:100px; height:80px; left:600px; top:600px;">    
-<img id="myImg04" src="myImage04.jpg"  style="position:absolute; width:100px; height:80px; left:860px; top:670px;">   
-
-
-<input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
-    
-}">
-
-
-<input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  myCheckHit()    
-}"><br><br>
-
-<body id="myBody' style="background-repeat:repeat: background-size: 80%" background="myBackground.jpg">
-
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground.jpg"  onkeydown="{
-   document.all.myText01.value = event.key
-   if (event.key == 'd') {  
-     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-   }   
-   if (event.key == 's') {   
-      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
-   }  
- 
-  myCheckHit()     
-}">
-
-
-
+</body>
+</html>
