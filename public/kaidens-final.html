@@ -1,16 +1,10 @@
 <script>
-
    
-
-
    
  // global variables here
-
    let myGlobalX = 0
    let myClock
    let myScore = 10
-
-
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
@@ -28,11 +22,8 @@ function myHitOther(my1,my2){
        return true
    }
 }
-
-
 function myCheckHit(){
    document.all.myText01.value = myScore  // show the present score
-
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit myImg02'  
@@ -52,25 +43,16 @@ function myCheckHit(){
     alert('Sorry you lose')
     location.reload()
    }
-
    // YOU WIN and go to next level!
-
    if ( myHitOther('myImg01','myImg04') ){
       document.all.myText01.value = 'You win the game!'  
        alert('You Win, now go to the next level')
       document.getElementById('myImg01').style.left = '20px'
       location = 'https://kaidenemeterio.github.io/game-dev-2024/public/Kaiden/'
    }
-
    // more if statements here
-
 }
-
-
 </script>
-
-
-
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="pacmanbackground.jpg"  onkeydown="{
    document.all.myText01.value = event.key
    if (event.key == 'd') {  // d = go right
@@ -82,15 +64,8 @@ function myCheckHit(){
    // put more here
   myCheckHit()     // checks for all collisions
 }">
-
-
-
-
-
 <h1 align=center><font color=yellow>kaidens final</font></h1>
-
    <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
-
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
   let myTemp = '100px 0px'
@@ -101,24 +76,20 @@ function myCheckHit(){
   }, 100)
     
 }">
-
-
 <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
-
 <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br><br>
 
-
-
-
 <img id="myImg01" src="myImage01.jpg" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
 <img id="myImg02" src="myImage02.jpg"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;"> 
-<img id="myImg02" src="myImage02.jpeg"  style="position:absolute; width:100px; height:80px; left:350px; top:600px;">
+<img id="myImg03" src="myimage05.jpeg"  style="position:absolute; width:100px; height:80px; left:350px; top:600px;">
+<img id="myImg04" src="myimage04.jpg"  style="position:absolute; width:100px; height:80px; left:1200px; top:670px;">
+<img id="myImg03" src="myImage03.jpeg"  style="position:absolute; width:100px; height:80px; left:350px; top:600px;">
 <img id="myImg04" src="myImage04.jpg"  style="position:absolute; width:100px; height:80px; left:1200px; top:670px;">
 <img id="myImg02" src="myImage02.jpg"  style="position:absolute; width:100px; height:80px; left:600px; top:220px;">
    <img id="myImg02" src="myImage02.jpg"  style="position:absolute; width:100px; height:80px; left:800px; top:350px;">
